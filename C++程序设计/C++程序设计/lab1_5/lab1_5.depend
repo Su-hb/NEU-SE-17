@@ -1,0 +1,8 @@
+# depslib dependency file v1.0
+1560126314 source:c:\users\sx\desktop\test\lab1_5\main.cpp
+	<stdio.h>
+	<iostream>
+	<stdlib.h>
+	<fstream>
+	"string.h"
+
