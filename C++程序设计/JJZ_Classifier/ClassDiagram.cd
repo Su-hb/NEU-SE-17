@@ -1,0 +1,32 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="JJZ_GradientDescentLR">
+    <Position X="5.75" Y="9.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAgAAABABAAAAgAAgAAAAABAAAAQABCAIAAAAAAA=</HashCode>
+      <FileName>JJZ_GradientDescentLR.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="JJZ_Classifier">
+    <Position X="3" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAQAECAAAAAAQAAAIAgAAAAABAEAEUACAAAQAAiAAA=</HashCode>
+      <FileName>JJZ_Classifier.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="JJZ_LogisticsRegression">
+    <Position X="3" Y="5.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAQIIAAAAAAAQAAAAgAABAAAAAAAQAAAAAQAIAAAA=</HashCode>
+      <FileName>JJZ_LogisticsRegression.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="JJZ_NewtonLR">
+    <Position X="0.75" Y="9.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAgAAABABAAAAgAAgAAAAABAAAAQABCAABEAAAAA=</HashCode>
+      <FileName>JJZ_NewtonLR.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Font Name="Microsoft YaHei UI" Size="9" />
+</ClassDiagram>
