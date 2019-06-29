@@ -1,0 +1,31 @@
+class Part  
+{
+ public:
+        Part();
+        Part(int i){val=i;}
+        ~Part();
+        void Print();
+ private:
+        int val;
+};
+class Whole 
+{
+public:
+       Whole();
+       Whole(int i,int j,int k);
+       ~Whole();
+       void Print();
+private:
+       Part one;
+       Part two;
+       int data;
+};
+Whole::Whole()
+{
+    data=0;
+}
+Whole::Whole(int i,int j,int k)
+             :two(i),one(j),data(k)
+{
+
+}

@@ -1,0 +1,107 @@
+class Base
+{
+public:
+	int m1;
+protected:
+	int m2;
+private:
+	int m3;
+};
+
+class PrivateClass:private Base
+{
+public:
+	void test()
+	{
+		m1=1;
+		m2=2;
+		m3=3; 
+	}
+};
+
+class DerivedFromPri: public PrivateClass
+{
+public:
+	void test()
+	{
+		m1=1;
+		m2=2;
+		m3=3;
+	}
+};
+class ProtectedClass:protected Base
+{
+public:
+	void test()
+	{
+		m1=1;
+		m2=2;
+		m3=3;
+	}
+};
+
+class DerivedFromPro: public ProtectedClass
+{
+public:
+	void test()
+	{
+		m1=1;
+		m2=2;
+		m3=3;
+	}
+};
+class PublicClass:public Base
+{
+public:
+	void test()
+	{
+		m1=1;
+		m2=2;
+		m3=3;
+	}
+};
+
+class DerivedFromPub: public PublicClass
+{
+public:
+	void test()
+	{
+		m1=1;
+		m2=2;
+		m3=3;
+	}
+};
+
+void main()
+{
+	PrivateClass priObj;
+	priObj.m1=10; 
+	priObj.m2=20; 
+	priObj.m3=30; 
+
+	ProtectedClass proObj;
+	proObj.m1=10; 
+	proObj.m2=20; 
+	proObj.m3=30; 
+
+	PublicClass pubObj;
+	pubObj.m1=10; 
+	pubObj.m2=20; 
+	pubObj.m3=30; 
+
+	DerivedFromPri DpriObj;
+	DpriObj.m1=100;
+	DpriObj.m2=200;
+	DpriObj.m3=300;
+
+	DerivedFromPro DproObj;
+	DproObj.m1=100;
+	DproObj.m2=200;
+	DproObj.m3=300;
+
+	DerivedFromPub DpubObj;
+	DpubObj.m1=100;
+	DpubObj.m2=200;
+	DpubObj.m3=300;
+
+}

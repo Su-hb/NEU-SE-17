@@ -1,0 +1,45 @@
+#include <iostream.h>
+#include <string.h>
+
+class Person
+{
+private:
+    char* name;
+    int  id;
+
+public:
+	Person(char* pName="no name",int pId=0)
+	{
+		int len=strlen(pName);
+		name=new char[len+1];
+		strcpy(name, pName);
+		id=pId;
+		cout<<"Constructing new person "<<name<<endl;
+	}
+    ~Person()
+	{
+        cout<<"Destructing person "<<name<<endl;
+		delete [] name;
+	}
+	
+    Person(Person& s)
+	{   
+        name = new char[strlen(s.name)+1];
+		strcpy(name, s.name);
+		id=s.id;
+		cout<<"Copy constructing person "<<name<<endl;
+	}
+};
+
+void fn(Person s)
+{
+    cout<<"In function fn()\n";
+}
+
+void main()
+{
+    Person randy("Randy Smith",1234);
+    cout<<"Calling fn()\n";
+    fn(randy);
+    cout<<"Returned from fn()\n";
+}

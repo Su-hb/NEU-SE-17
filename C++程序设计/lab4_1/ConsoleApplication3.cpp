@@ -4,9 +4,16 @@
 using namespace std;
 
 template <typename T>
-inline T const& Min(T const& a, T const& b)
+inline  const T & Min(const T & a, const T & b)
 {
 	return a < b ? a : b;
+}
+
+inline const char* Min(const char* a, const char* b) {
+	if (strcmp(a, b) < 0) {
+		return a;
+	}
+	return b;
 }
 int main()
 {
@@ -21,11 +28,11 @@ int main()
 
 	string s1 = "Hello";
 	string s2 = "World";
-	cout << "Min(s2, s1): " << Min(s1, s2) << endl;
+	cout << "Min(s2, s1): " << Min(s2, s1) << endl;
 
 
-	const char* c1 = "Hello";
-	const char* c2 = "World";
+	const char* c1 = "Zzz";
+	const char* c2 = "Horld";
 	cout << "Min(c2, c1): " << Min(c1, c2) << endl;
 	return 0;
 }

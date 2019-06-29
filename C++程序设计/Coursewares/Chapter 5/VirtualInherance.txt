@@ -1,0 +1,43 @@
+#include <iostream.h>
+
+class base
+{
+public:
+	base()
+	{
+		cout<<"constructing base.."<<endl;
+	}
+};
+
+class middle1: public base
+{
+public:
+	middle1()
+	{
+		cout<<"constructing middle1.."<<endl;
+	}
+};
+
+class middle2:virtual public base
+{
+public:
+	middle2()
+	{
+		cout<<"constructing middle2.."<<endl;
+	}
+};
+
+class end:public middle1,middle2
+{
+public:
+	end()
+	{
+		cout<<"constructing end.."<<endl;
+	}
+};
+
+void main()
+{
+	end d;
+	return;
+}
