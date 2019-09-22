@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<eclipse-userlibraries>
+  <library name="mysql-connector-java-8.0.12">
+    <archive path="F:/作业/数据结构课设/newproject/src/lib/mysql-connector-java-8.0.12.jar" />
+  </library>
+</eclipse-userlibraries>
+

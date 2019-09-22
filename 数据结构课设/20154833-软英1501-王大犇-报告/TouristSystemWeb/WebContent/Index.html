@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Tourist Management System</title>
+     <link href="css/Menu.css" rel="stylesheet">
+     <link href="css/loginDialog.css" rel="stylesheet">
+     <script src="js/Menu.js" ></script>
+     <script src="js/time.js"></script>
+     <script src="js/jquery-1.8.3.min.js"></script>
+     <script type="text/javascript" src="js/fisheye-iutil.min.js"></script>
+     <script type="text/javascript" src="js/dock-example1.js"></script>
+     <script type="text/javascript" src="js/jquery.jqDock.min.js"></script>
+</head>
+<body onload="showLeftTime()">
+<div>
+    <img src="image/Menu.jpg"  height="100%" width="100%" style="position:absolute; left:0;top:0; ">
+</div>
+<div style=" overflow:fixed;" >
+  <div >
+ 
+    <div style="position:relative; left:45px; top:45px; font-size:65px">
+        <font face="华文细黑" color="white"><b>Tourist Management System</b></font>
+        <a id="logInfo" style="position:relative; font-size:20px;"></a>
+    </div>
+    
+    
+    <!-- 多个box存放不同的板块 -->
+    <div style="position:relative; ">
+        <!--点击可以去游客界面  -->
+        <div class="mainbox1" style="position:absolute;float:left; left:80px;top:88px;">
+             <font  color="black"  style="position:absolute;font-size:45px;left:160px;top:0px;"><b>Tourist</b></font>
+             <a href="Tourist.jsp"><img id="Tour" src="image/Tour.png" style="position:relative; "  onMouseOver="TourOver()" onMouseOut="TourOut()"></a>
+        </div>
+    
+        <!-- 点击弹出登录界面，管理员登录 -->
+        <div class="mainbox2" style="position:absolute; float:left;left:610px;top:88px;" >
+             <a href="#" id="jump"><img id="Admin" src="image/Admin.jpg" style="position:relative;"  onMouseOver="AdminOver()" onMouseOut="AdminOut()"></a>
+             <font face="Harlow Solid Italic" color="black" style="position:relative; font-size:45px;left:120px;top:15px;">Administrator</font>
+             
+
+    
+        </div>
+        
+        <div class="mainbox3" style="position:absolute; float:left;left:610px;top:468px;">
+             <img src="image/Dab.jpg" style="position:relative; height:90px;left:40px;top:15px;">
+             <font color="black"  style="position:relative;font-size:30px;left:40px;top:0px;"><b>Contact us</b></font>
+        </div>
+        
+        <div class="mainbox4" style="position:absolute; float:right;right:24px;top:88px;">
+             <div  style="position:relative;height:190px;width:320px;top:28px;left:24px;">
+              <div class="carousel-inner" role="listbox"  style="height:190px;">
+              <div class="item active">
+                <img src="image/first.jpg" alt="first" style="width:100%; height:190px;">
+              </div>
+             </div>
+         </div>
+        </div>
+    </div>
+  </div>
+   
+
+</div>
+   
+   <!-- 管理员的登录界面，调用另外登录的jsp文件 -->
+    <div id="LoginBox">
+      
+        <div class="row1">
+            Log in as Administrator<a href="javascript:void(0)" title="关闭窗口" class="close_btn" id="closeBtn">×</a>
+        </div>
+        <form name="regForm" action="doLogin.jsp" method="post">
+        <table>
+            <div class="row" font-family="华文细黑">
+                  UserName:<span class="inputBox">
+                <input type="text" id="txtName" placeholder="Account" name="username"/>
+                </span><a href="javascript:void(0)" title="提示" class="warning" id="warn">*</a>
+            </div>
+            <div class="row">
+                Password  :  <span class="inputBox">
+                <input type="password" id="txtPwd" placeholder="Code" name="password"/>
+                </span><a href="javascript:void(0)" title="提示" class="warning" id="warn2">*</a>
+            </div>
+            <div class="row">
+                <a><input id="loginbtn" type="submit" value="submit"/></a>
+            </div>
+        </table>
+    </form>
+    </div>
+
+    <script type="text/javascript">
+	$(function ($) {
+		//弹出登录
+		$("#jump").hover(function () {
+			$(this).stop().animate({
+				opacity: '1'
+			}, 600);
+		}, function () {
+			$(this).stop().animate({
+				opacity: '0.6'
+			}, 1000);
+		}).on('click', function () {
+			$("body").append("<div id='mask'></div>");
+			$("#mask").addClass("mask").fadeIn("slow");
+			$("#LoginBox").fadeIn("slow");
+		});
+		//
+		//按钮的透明度
+		$("#loginbtn").hover(function () {
+			$(this).stop().animate({
+				opacity: '1'
+			}, 600);
+		}, function () {
+			$(this).stop().animate({
+				opacity: '0.8'
+			}, 1000);
+		});
+		//文本框不允许为空---按钮触发
+		$("#loginbtn").on('click', function () {
+			var txtName = $("#txtName").val();
+			var txtPwd = $("#txtPwd").val();
+			if (txtName == "" || txtName == undefined || txtName == null) {
+				if (txtPwd == "" || txtPwd == undefined || txtPwd == null) {
+					$(".warning").css({ display: 'block' });
+				}
+				else {
+					$("#warn").css({ display: 'block' });
+					$("#warn2").css({ display: 'none' });
+				}
+			}
+			else {
+				if (txtPwd == "" || txtPwd == undefined || txtPwd == null) {
+					$("#warn").css({ display: 'none' });
+					$(".warn2").css({ display: 'block' });
+				}
+				else {
+					$(".warning").css({ display: 'none' });
+				}
+			}
+		});
+		//文本框不允许为空---单个文本触发
+		$("#txtName").on('blur', function () {
+			var txtName = $("#txtName").val();
+			if (txtName == "" || txtName == undefined || txtName == null) {
+				$("#warn").css({ display: 'block' });
+			}
+			else {
+				$("#warn").css({ display: 'none' });
+			}
+		});
+		$("#txtName").on('focus', function () {
+			$("#warn").css({ display: 'none' });
+		});
+		//
+		$("#txtPwd").on('blur', function () {
+			var txtName = $("#txtPwd").val();
+			if (txtName == "" || txtName == undefined || txtName == null) {
+				$("#warn2").css({ display: 'block' });
+			}
+			else {
+				$("#warn2").css({ display: 'none' });
+			}
+		});
+		$("#txtPwd").on('focus', function () {
+			$("#warn2").css({ display: 'none' });
+		});
+		//关闭
+		$(".close_btn").hover(function () { $(this).css({ color: 'black' }) }, function () { $(this).css({ color: '#999' }) }).on('click', function () {
+			$("#LoginBox").fadeOut("fast");
+			$("#mask").css({ display: 'none' });
+		});
+	});
+	</script>
+<div style="text-align:center;clear:both;margin-top:250px">
+<script src="/gg_bd_ad_720x90.js" type="text/javascript"></script>
+<script src="/follow.js" type="text/javascript"></script>
+</div>
+</body>
+</html>
