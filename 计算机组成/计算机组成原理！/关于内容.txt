@@ -1,0 +1,84 @@
+第1章 教学内容
+Chapter 1.  Introduction                                                                                                 (2 hours)
+1.1 The Scope of Computer Architecture and Organization                                           know
+1.2 Modeling Computer Organization                                                                         know
+1.3 A Historical Sketch of Computer Evolution                                                           know
+1.4 Perspectives of the Computer Evolution                                                                know
+
+第2章 教学内容
+Chapter 2. the Representation of Information in a Computer                                                       (4 hours)
+2.1 Date Types Representing Information in a Computer                                              understand
+2.2 Representation of Fixed-Point Unsigned Numbers                                                  understand
+2.3 Representation of Fixed-Point Signed Numbers                                                     understand
+2.4 Binary Addition/Subtraction                                                                                master
+2.5 Other Code Systems Using Bit Strings                                                                  know
+
+第3章 教学内容
+Chapter 3. Logic Design of Combinational Circuits                                                             (1 hours)
+3.1 Combinational Logic Functions and Expressions                                                    understand
+3.2 Karnaugh Maps for Simplification of Logic Functions                                            know
+3.3 Implementation of Combinational Logic Functions                                                        master
+3.4 Combinational MSI Modules                                                                               understand
+
+第4章 教学内容
+Chapter 4. Logic Design of Sequential Circuits                                      (1 hours)
+4.1 General Model of Sequential Circuits                                                                    understand
+4.2 Flip-Flops                                                                                                          know
+4.3 Sequential MSI Modules                                                                                     understand
+
+第5章 教学内容
+Chapter 5 The Arithmetic Logic Unit                                                                                 (2 hours)
+5.1 The Von Neumann Computer Model                                                                     know
+5.2 Parallel Fast Adders                                                                                            master
+5.3 Analysis of the Design of a Commercial ALU Chip                                                understand
+
+第6章 教学内容
+Chapter 6 Complex Arithmetic Operations                                                                         (6 hours)
+6.1 Single-Precision Multiplication                                                                            understand
+6.2 Double-Precision Multiplication                                                                           understand
+6.3 Single-Precision Division                                                                                           understand
+6.4 Double-Precision Division                                                                                   understand
+6.5 Floating-Point Operations                                                                                           master
+
+第7章 教学内容
+Chapter 7 Instruction Set Architecture                                                                               (2 hours)
+7.1 The Instruction Format                                                                                        master
+7.2 The Addressing Modes                                                                                        master
+7.3 Reduced Instruction Set Computers (RISC)                                                           master
+
+第8章 教学内容
+Chapter 8 The Central Processing Unit                                                                               (2 hours)
+8.1 The Functions and Functional Parts of a CPU                                                               master
+8.2 The Basic Organization of the CPU                                                                             know
+8.3 The Structure of a CPU Based on an Accumulator                                                  know
+8.4 The Structure of a CPU Based on General-Purpose Registers                                          know
+8.5 CPU Bit-Slice Device-----A Case Study                                                                understand
+
+第9章 教学内容
+Chapter 9 The Control Unit                                                                                              (6 hours)
+9.1 Functions and General Organization of a Control Unit                                            master
+9.2 Preliminaries of Designing Control Circuits                                                           know
+9.3 Design of the Sequential Control of Arithmetic Operations                                      understand
+9.4 Design of Hardwired Control of a Simple Computer                                              understand
+9.5 Design of Microprogrammed Control of a Simple Computer                                          understand
+
+第10章 教学内容
+Chapter 10 Primary Memory                                                                                            (6 hours)
+10.1 The Memory Hierarchy                                                                                     know
+10.2 The Organization of Main Memory                                                                     master
+10.3 Cache Memory                                                                                                 master
+10.4 Overall Primary Memory Organization                                                                      master
+
+教学内容
+了解并掌握计算机硬件的基本知识。在此基础上着重讲述：计算机中“数”的运算；存储；计算机(CPU)的设计和工作原理。
+具体课时安排： 
+第1章  绪论（2学时） 
+第2章  计算机中的信息表示（4学时） 
+第3章  组合线路的逻辑设计（1学时） 
+第4章  时序线路的逻辑设计（1学时） 
+第5章  算术逻辑单元（2学时） 
+第6章  复杂算术操作（6学时） 
+第7章  指令系统结构（2学时） 
+第8章  中央处理器（2学时） 
+第9章  控制器（6学时） 
+第10章  存储器（6学时）

@@ -1,0 +1,18 @@
+We use 8M*8bit memory chip to form a 64M*16bit main memory module. Required that the capacity of storage be expand, the access time be reduced.
+Questions:
+(1) How many 8M*8bit memory chips should be used?
+(2) Give the address length of each memory chip and address length of main memory module.
+(3) Descript select chip logic functions of each chip.
+ Descript the connection way among encoder, CPU and memory chips.
+(4)For an address (3456789)16, give its body number and address inside the body.
+答：
+1.16个。
+2.每个memory chip的地址长度为23
+main memory chip的地址长度为26（64M经典的为26 得注意64M = 64*10^6）
+3.一共分为8组，每组内2个芯片一组作位拓展。
+其中每组一个芯片的数据位0--7连主存的数据线0--7，另一个芯片的数据位0--7连主存数据线的8--15.  8组芯片作字拓展。
+A3~A24连新地芯片组的地址位    A0A1A2连接新的译码器   译码器为3-8译码器 分别连CS0~CS7
+4. 将3456789化为二进制形式为 0011 0100 0101 0110 0111 1000 1001
+   将此右移3位为 0 0110 1000 1010 1100 1111 0001
+   即为068ACF1 即为地址    最低三位为001  所以体号为1
+   
