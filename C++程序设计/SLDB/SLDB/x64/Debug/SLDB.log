@@ -1,13 +1,4 @@
 ﻿  SLDB.cpp
 F:\NEU-SE-17\C++程序设计\SLDB\SLDB\skiplist.h(14,27): warning C4244:  “初始化”: 从“uint64_t”转换到“uint16_t”，可能丢失数据
-  kvdb.cpp
 F:\NEU-SE-17\C++程序设计\SLDB\SLDB\SLDB.cpp(13,12): warning C4244:  “参数”: 从“time_t”转换到“unsigned int”，可能丢失数据
-F:\NEU-SE-17\C++程序设计\SLDB\SLDB\skiplist.h(14,27): warning C4244:  “初始化”: 从“uint64_t”转换到“uint16_t”，可能丢失数据
-  node.cpp
-  skiplist.cpp
-F:\NEU-SE-17\C++程序设计\SLDB\SLDB\kvdb.cpp(40,64): warning C4267:  “参数”: 从“size_t”转换到“uint32_t”，可能丢失数据
-F:\NEU-SE-17\C++程序设计\SLDB\SLDB\skiplist.h(14,27): warning C4244:  “初始化”: 从“uint64_t”转换到“uint16_t”，可能丢失数据
-F:\NEU-SE-17\C++程序设计\SLDB\SLDB\skiplist.cpp(8,12): warning C4244:  “参数”: 从“time_t”转换到“unsigned int”，可能丢失数据
-  正在生成代码...
-F:\NEU-SE-17\C++程序设计\SLDB\SLDB\skiplist.cpp(119,40): warning C4267:  “初始化”: 从“size_t”转换到“int”，可能丢失数据
   SLDB.vcxproj -> F:\NEU-SE-17\C++程序设计\SLDB\SLDB\x64\Debug\SLDB.exe

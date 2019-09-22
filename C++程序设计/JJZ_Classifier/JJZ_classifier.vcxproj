@@ -80,6 +80,9 @@
       <TargetMachine>MachineX86</TargetMachine>
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <SubSystem>Console</SubSystem>
+      <LargeAddressAware>true</LargeAddressAware>
+      <HeapReserveSize>
+      </HeapReserveSize>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
@@ -99,6 +102,7 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="JJZ_Classifier.cpp" />
+    <ClCompile Include="JJZ_GeneticAlgorithm.cpp" />
     <ClCompile Include="JJZ_GradientDescentLR.cpp" />
     <ClCompile Include="JJZ_LogisticsRegression.cpp" />
     <ClCompile Include="JJZ_MyMatrix.cpp" />
@@ -107,6 +111,7 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="JJZ_Classifier.h" />
+    <ClInclude Include="JJZ_GeneticAlgorithm.h" />
     <ClInclude Include="JJZ_GradientDescentLR.h" />
     <ClInclude Include="JJZ_LogisticsRegression.h" />
     <ClInclude Include="JJZ_MyMatrix.h" />

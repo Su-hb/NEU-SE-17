@@ -240,8 +240,8 @@ void test_bupa() {
 }
 int main()
 {
-	test_bupa();
-	//test_iris();
+	//test_bupa();
+	test_iris();
 	//	test_mnist();
 	return 0;
 }

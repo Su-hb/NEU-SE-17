@@ -32,7 +32,7 @@ Handle* SkipList::search(const std::string& key) const {
 	//读写锁,函数运行结束，自动释放内存
 	auto cur_node = _list_head;
 	for (int i = MAX_LEVEL - 1; i >= 0; i--) {
-		while (cur_node->_forward[i]->_key != "" && cur_node ->_forward[i]->_key < key)
+		while (cur_node->_forward[i]->_key != "" && cur_node->_forward[i]->_key < key)
 		{
 			cur_node = cur_node->_forward[i];
 		}
@@ -91,8 +91,6 @@ Status SkipList::insert(const std::string& key, const char* value, uint64_t valu
 	}
 	//插入成功
 	return Status::SUCCESS;
-
-
 }
 
 Status SkipList::remove(const std::string& key) {
@@ -137,26 +135,18 @@ void SkipList::print() {
 	*/
 	//读写锁
 	std::shared_lock<std::shared_mutex> lock(_mutex);
-	//打印key
 	for (int i = MAX_LEVEL - 1; i >= 0; i--) {
 		auto cur_node = _list_head->_forward[i];
 		while (cur_node != _list_tail) {
 			std::cout << cur_node->_key + "->";
 			cur_node = cur_node->_forward[i];
 		}
-		//队尾
 		std::cout << "NIL" << std::endl;
 	}
-	std::cout << std::endl;
-	std::cout << std::endl;
-	std::cout << std::endl;
-
-
-	//打印value
 	for (int i = MAX_LEVEL - 1; i >= 0; i--) {
 		auto cur_node = _list_head->_forward[i];
 		while (cur_node != _list_tail) {
-			std::cout << cur_node->_key + "->";
+			std::cout << std::string(cur_node->_value.get()) + "->";
 			cur_node = cur_node->_forward[i];
 		}
 		std::cout << "NIL" << std::endl;
@@ -168,7 +158,7 @@ Status SkipList::dump() {
 	/*
 		写入磁盘
 	*/
-	std::cout<< "Dump skiplist to disk." << std::endl;
+	std::cout << "Dump skiplist to disk." << std::endl;
 	//加锁
 	std::shared_lock<std::shared_mutex> lock(_mutex);
 	std::fstream file("./skiplist.dump", std::ios::binary | std::ios::out);

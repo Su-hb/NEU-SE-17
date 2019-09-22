@@ -115,7 +115,8 @@ bool bpnn::set_momentum(double _mom) {
 //正向传播
 const bpnn::vecd& bpnn::compute(const vecd& _in) {
 	if (!initialized) exit(1);
-	assert((int)_in.size() >= num_in);//assert宏的原型定义在<assert.h>中，其作用是如果它的条件返回错误，则终止程序执行。
+	assert((int)_in.size() >= num_in);//assert宏的原型定义在<assert.h>中，其
+	//作用是如果它的条件返回错误，则终止程序执行。
 	std::copy_n(_in.begin(), num_in, vec_in.begin());
 	std::fill(vec_hid.begin(), vec_hid.end(), 0.0);
 	std::fill(vec_out.begin(), vec_out.end(), 0.0);
@@ -131,11 +132,7 @@ const bpnn::vecd& bpnn::compute(const vecd& _in) {
 			vec_out[i] += hid_out[i][j] * vec_hid[j];
 	for (int i = 0; i < num_out; ++i)
 		vec_out[i] = sigmoid(vec_out[i] + const_hid[i]);
-
-
 	return vec_out;
-
-
 
 }
 //反向传播
@@ -154,7 +151,6 @@ const double bpnn::backward(const vecd& _out) {
 		delta_hid[i] *= sigmoid_d(vec_hid[i]);
 		error += std::abs(delta_hid[i]);
 	}
-
 	// 更新网络权值
 	double d_ij;
 	for (int i = 0; i < num_out; ++i)
@@ -166,7 +162,6 @@ const double bpnn::backward(const vecd& _out) {
 		}
 	for (int i = 0; i < num_out; ++i)
 		const_hid[i] += learn_rate * delta_out[i];
-
 	for (int i = 0; i < num_hid; ++i)
 		for (int j = 0; j < num_in; ++j)
 		{
@@ -176,9 +171,7 @@ const double bpnn::backward(const vecd& _out) {
 		}
 	for (int i = 0; i < num_hid; ++i)
 		const_in[i] += learn_rate * delta_hid[i];
-
 	return error;
-	
 }
 //训练
 double bpnn::learn(const vecd& _in, const vecd& out) {
